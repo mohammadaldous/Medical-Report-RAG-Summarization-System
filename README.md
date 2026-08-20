@@ -2,67 +2,79 @@
 ```markdown
 # 🩺 Medical Report RAG & Summarization System
 
-نظام ذكي متكامل مبني بلغة بايثون لمعالجة وفحص التقارير الطبية، يعتمد على تقنية **RAG (Retrieval-Augmented Generation)** وقواعد البيانات الشعاعية لتوليد ملخصات سريرية دقيقة للأطباء، مع شات بوت تفاعلي ومنظومة تحقق صارمة من صحة البيانات.
+[![SDAIA Academy](https://img.shields.io/badge/Developed%20for-SDAIA%20Academy-blue?style=flat-square&logo=github)](https://github.com/SDAIAAcademy)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-green?style=flat-square&logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?style=flat-square&logo=streamlit)](https://streamlit.io/)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20Store-purple?style=flat-square)](https://www.trychroma.com/)
+
+An end-to-end AI-powered clinical assistant built with Python. This system processes and validates medical reports, leverages **Retrieval-Augmented Generation (RAG)** with vector storage (**ChromaDB**) to generate guideline-grounded summaries for physicians, and provides an interactive, hallucination-safe clinical chatbot.
+
+> 🎓 **Academic Project Acknowledgment**  
+> This project was developed as part of a training course program offered by **[SDAIA Academy](https://github.com/SDAIAAcademy)** (@SDAIAAcademy).
 
 ---
 
-## 📌 مميزات ووظائف المشروع
+## 📌 Key Features
 
-1. **دعم تنسيقات متعددة للملفات:**
-   - قراءة واستخراج النصوص من ملفات: `TXT`، `PDF`، و `Excel` (`.xlsx`, `.xls`).
+1. **Multi-Format Document Ingestion:**
+   - Text extraction from `TXT`, `PDF`, and `Excel` (`.xlsx`, `.xls`) medical files.
 
-2. **التحقق الآلي من جودة وصحة البيانات (Data Quality Pipeline):**
-   - **اسم المريض:** التحقق من احتوائه على أحرف فقط ورفض أي أرقام أو رموز خاصة.
-   - **عمر المريض:** التحقق من كونه رقماً صحيحاً وضمن النطاق المقبول (بين 0 و 120 سنة).
-   - رفض الملف فوراً ومنع معالجته أو إدخاله للنموذج في حال عدم استيفاء الشروط.
+2. **Automated Data Quality & Validation Pipeline:**
+   - **Patient Name:** Strictly validates string inputs to contain only alphabetic letters (rejects digits and special symbols).
+   - **Patient Age:** Ensures age is an integer within a valid human lifespan (0 to 120 years).
+   - **Automatic Rejection:** Instantly rejects invalid files, preventing corrupted data from entering the LLM pipeline.
 
-3. **نظام استرجاع المعلومات الموسع (RAG System):**
-   - ربط التقارير بقاعدة معرفة طبية استرشادية للمستشفى (`hospital_knowledge.txt`).
-   - استخدام قاعدة البيانات الشعاعية **ChromaDB** لتخزين واسترجاع البروتوكولات الطبية المناسبة.
+3. **RAG-Grounded Clinical Summarization:**
+   - Ingests hospital guidelines and clinical protocol datasets (`hospital_knowledge.txt`).
+   - Uses **ChromaDB** vector database to retrieve contextual knowledge for generating structured clinical summaries.
 
-4. **التخزين الدائم (Persistent Storage):**
-   - إمكانية حفظ تقرير المريض والملخص الطبي داخل مجموعة `patient_records` في ChromaDB بضغطة زر.
+4. **Persistent Vector Storage:**
+   - Allows one-click persistent saving of patient reports and generated summaries into a `patient_records` collection in ChromaDB.
 
-5. **شات بوت طبي تفاعلي (Interactive Clinical Chatbot):**
-   - إمكانية طرح أسئلة واستفسارات عن حالة المريض بناءً على التقرير المرفوع.
-   - مزود بضوابط صارمة لمنع التوليد الخاطئ (Hallucination)، حيث يجيب بـ "المعلومة غير متوفرة في التقرير الطبي" إذا لم تكن المعلومة مذكورة.
+5. **Grounded Clinical Chatbot (Hallucination-Safe):**
+   - Interactive Q&A strictly constrained to the uploaded patient report.
+   - Responds with *"Information not available in the report"* if requested data is missing, guaranteeing zero hallucination.
 
-6. **سجل أحداث النظام (System Logging):**
-   - توثيق وتسجيل جميع عمليات خط الأنابيب (قبول/رفض الملفات، نتائج التحقق، عمليات التلخيص، والحفظ) داخل ملف `system_pipeline.log`.
+6. **Audit & Pipeline Logging:**
+   - Comprehensive system logging in `system_pipeline.log` for full auditability of validations, summaries, and errors.
 
-7. **واجهة مستخدم تفاعلية (Streamlit UI):**
-   - واجهة ويب عصرية بدون كتابة أي كود HTML.
+7. **Clean Web UI:**
+   - Built completely using Streamlit with no HTML required.
 
 ---
 
-## 📂 هيكل ملفات المشروع
+## 📂 Project Structure
 
 ```text
-├── app.py                   # واجهة المستخدم التفاعلية (Streamlit)
-├── pipeline.py              # منطق الفحص، الـ RAG، السجلات، وتخزين البيانات
-├── hospital_knowledge.txt   # قاعدة المعرفة الخاصة ببروتوكولات المستشفى
-├── requirements.txt         # المكتبات والاعتماديات المطلوبة
-├── system_pipeline.log      # ملف السجل (يتم إنشاؤه تلقائياً)
-└── README.md                # دليل توثيق المشروع
+├── app.py                   # Streamlit interactive web interface
+├── pipeline.py              # Data extraction, validation, RAG, logging, and ChromaDB logic
+├── hospital_knowledge.txt   # Hospital guidelines / clinical knowledge dataset
+├── requirements.txt         # Project dependencies
+├── system_pipeline.log      # Event audit log file (auto-generated)
+└── README.md                # Project documentation
 
 ```
 
 ---
 
-## 🚀 طريقة التثبيت والتشغيل
+## 🚀 Installation & Setup
 
-### 1. تثبيت المتطلبات
+### 1. Clone the Repository
 
-افتح موجه الأوامر (Terminal) داخل مجلد المشروع ونفّذ:
+```bash
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+cd your-repo-name
+
+```
+
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 
 ```
 
-### 2. تشغيل النظام
-
-شغّل واجهة التطبيق عبر الأمر:
+### 3. Run the Application
 
 ```bash
 python -m streamlit run app.py
@@ -71,18 +83,39 @@ python -m streamlit run app.py
 
 ---
 
-## ⚙️ طريقة الاستخدام
+## ⚙️ How to Use
 
-1. أدخل مفتاح الـ API (سواء من OpenAI أو OpenRouter) في الشريط الجانبي (Sidebar).
-2. ارفع التقرير الطبي بأي صيغة مدعومة (`TXT`, `PDF`, `Excel`).
-3. اضغط على زر **Process & Validate Report**:
-* سيتم فحص الاسم والعمر تلقائياً.
-* في حال القبول، سيتم توليد ملخص طبي منظم للطبيب فوراً.
+1. **Enter API Key:** Paste your OpenAI or OpenRouter API key in the sidebar configuration.
+2. **Upload Report:** Select a medical file (`TXT`, `PDF`, or `Excel`).
+3. **Process & Validate:** Click **🚀 Process & Validate Report** to run data quality checks.
+4. **View Summary:** Review the generated physician-ready summary.
+5. **Save to Database:** Click **💾 Save Record to ChromaDB** to archive the record permanently.
+6. **Chat:** Ask specific questions about the patient in the chat interface below.
 
+---
 
-4. يمكنك الضغط على **Save Record to ChromaDB** لحفظ المريض في قاعدة البيانات الشعاعية.
-5. استخدم الشات بوت أسفل الصفحة لطرح أي استفسارات مباشرة حول حالة المريض.
+## 📜 Credits & Acknowledgments
+
+Special thanks to **[SDAIA Academy](https://github.com/SDAIAAcademy)** (@SDAIAAcademy) for providing the curriculum and guidance during this AI course.
+
+---
+
+## 📸 Application Screenshots
+
+### 1. Upload Medical Report Interface
+
+### 2. Validation Rejected Example
+
+### 3. Validation Passed Example
+
+### 4. Generated Physician Clinical Summary
+
+### 5. Grounded Interactive Chatbot
 
 ```
+
+---
+
+💡 **ملاحظة:** عند رفع ملفات الصور على مستودع (Repository) الـ GitHub، احرص على رفع صور Screenshots بنفس أسمائها الأصلية المكتوبة في الكود أعلاه، وستظهر مباشرة وبشكل أنيق وواضح داخل الصفحة.
 
 ```
