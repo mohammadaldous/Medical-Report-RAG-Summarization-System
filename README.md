@@ -2,11 +2,6 @@
 ```markdown
 # 🩺 Medical Report RAG & Summarization System
 
-[![SDAIA Academy](https://img.shields.io/badge/Developed%20for-SDAIA%20Academy-blue?style=flat-square&logo=github)](https://github.com/SDAIAAcademy)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-green?style=flat-square&logo=python)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?style=flat-square&logo=streamlit)](https://streamlit.io/)
-[![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20Store-purple?style=flat-square)](https://www.trychroma.com/)
-
 An end-to-end AI-powered clinical assistant built with Python. This system processes and validates medical reports, leverages **Retrieval-Augmented Generation (RAG)** with vector storage (**ChromaDB**) to generate guideline-grounded summaries for physicians, and provides an interactive, hallucination-safe clinical chatbot.
 
 > 🎓 **Academic Project Acknowledgment**  
@@ -55,7 +50,14 @@ An end-to-end AI-powered clinical assistant built with Python. This system proce
 
 ```
 
----
+## User Interface
+
+![UI](img1.png)
+![UI](img2.png)
+![UI](img3.png)
+![UI](img4.png)
+![UI](img5.png)
+
 
 ## 🚀 Installation & Setup
 
@@ -81,8 +83,6 @@ python -m streamlit run app.py
 
 ```
 
----
-
 ## ⚙️ How to Use
 
 1. **Enter API Key:** Paste your OpenAI or OpenRouter API key in the sidebar configuration.
@@ -99,23 +99,3 @@ python -m streamlit run app.py
 Special thanks to **[SDAIA Academy](https://github.com/SDAIAAcademy)** (@SDAIAAcademy) for providing the curriculum and guidance during this AI course.
 
 ---
-
-## 📸 Application Screenshots
-
-### 1. Upload Medical Report Interface
-
-### 2. Validation Rejected Example
-
-### 3. Validation Passed Example
-
-### 4. Generated Physician Clinical Summary
-
-### 5. Grounded Interactive Chatbot
-
-```
-
----
-
-💡 **ملاحظة:** عند رفع ملفات الصور على مستودع (Repository) الـ GitHub، احرص على رفع صور Screenshots بنفس أسمائها الأصلية المكتوبة في الكود أعلاه، وستظهر مباشرة وبشكل أنيق وواضح داخل الصفحة.
-
-```
