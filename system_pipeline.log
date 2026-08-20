@@ -1,0 +1,54 @@
+2026-08-20 13:44:57,601 - [INFO] - HTTP Request: GET https://chroma-onnx-models.s3.amazonaws.com/all-MiniLM-L6-v2/onnx.tar.gz "HTTP/1.1 200 OK"
+2026-08-20 13:45:06,362 - [INFO] - Initialized Knowledge Base with 4 chunks.
+2026-08-20 13:47:45,459 - [INFO] - Starting data validation pipeline...
+2026-08-20 13:47:45,459 - [INFO] - Validation Passed for patient: Salem Ahmed, Age: 45.
+2026-08-20 13:47:45,464 - [INFO] - Starting RAG retrieval and summary generation...
+2026-08-20 13:47:48,228 - [INFO] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-08-20 13:50:43,391 - [INFO] - Starting data validation pipeline...
+2026-08-20 13:50:43,392 - [INFO] - Validation Passed for patient: Salem Ahmed, Age: 45.
+2026-08-20 13:50:43,396 - [INFO] - Starting RAG retrieval and summary generation...
+2026-08-20 13:50:45,009 - [INFO] - Starting data validation pipeline...
+2026-08-20 13:50:45,011 - [INFO] - Validation Passed for patient: Salem Ahmed, Age: 45.
+2026-08-20 13:50:45,017 - [INFO] - Starting RAG retrieval and summary generation...
+2026-08-20 13:50:46,216 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 13:50:46,381 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 13:50:48,150 - [INFO] - Summary generated successfully.
+2026-08-20 13:50:48,357 - [INFO] - Summary generated successfully.
+2026-08-20 13:53:10,873 - [INFO] - Successfully saved record for Salem Ahmed into ChromaDB (ID: 9e737386-e834-4bcb-a5cc-fc02810ea556).
+2026-08-20 13:53:25,675 - [INFO] - Starting data validation pipeline...
+2026-08-20 13:53:25,675 - [WARNING] - Validation Rejected: Patient name 'Salem123' contains invalid characters, digits, or symbols.
+2026-08-20 13:56:23,448 - [INFO] - Starting data validation pipeline...
+2026-08-20 13:56:23,449 - [WARNING] - Validation Rejected: Patient name 'Salem123' contains invalid characters, digits, or symbols.
+2026-08-20 13:56:50,537 - [INFO] - Starting data validation pipeline...
+2026-08-20 13:56:50,537 - [INFO] - Validation Passed for patient: Salem Ahmed, Age: 45.
+2026-08-20 13:56:50,547 - [INFO] - Starting RAG retrieval and summary generation...
+2026-08-20 13:56:52,948 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 13:56:55,099 - [INFO] - Summary generated successfully.
+2026-08-20 13:57:26,258 - [INFO] - Successfully saved record for Salem Ahmed into ChromaDB (ID: 3ace3269-8c34-41fc-8b21-899dae9cb88d).
+2026-08-20 14:06:23,203 - [INFO] - Starting data validation pipeline...
+2026-08-20 14:06:23,203 - [INFO] - Validation Passed for patient: Salem Ahmed, Age: 45.
+2026-08-20 14:06:23,213 - [INFO] - Starting RAG retrieval and summary generation...
+2026-08-20 14:06:25,970 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 14:06:32,165 - [INFO] - Summary generated successfully.
+2026-08-20 14:07:23,122 - [INFO] - Processing chatbot question: وش يعاني منه المريض ؟
+2026-08-20 14:07:34,677 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 14:07:35,188 - [INFO] - Chatbot answered question.
+2026-08-20 14:08:00,567 - [INFO] - Processing chatbot question: كم السكر التراكمي ؟
+2026-08-20 14:08:02,358 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 14:08:02,706 - [INFO] - Chatbot answered question.
+2026-08-20 14:08:24,964 - [INFO] - Processing chatbot question: كم وزن المريض ؟
+2026-08-20 14:08:30,486 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 14:08:30,820 - [INFO] - Chatbot answered question.
+2026-08-20 14:10:38,218 - [INFO] - Starting data validation pipeline...
+2026-08-20 14:10:38,218 - [WARNING] - Validation Rejected: Patient name 'Salem123' contains invalid characters, digits, or symbols.
+2026-08-20 14:16:54,221 - [INFO] - Starting data validation pipeline...
+2026-08-20 14:16:54,222 - [INFO] - Validation Passed for patient: Salem Ahmed, Age: 45.
+2026-08-20 14:16:54,227 - [INFO] - Starting RAG retrieval and summary generation...
+2026-08-20 14:16:55,945 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 14:17:02,191 - [INFO] - Summary generated successfully.
+2026-08-20 14:17:23,874 - [INFO] - Processing chatbot question: وش يعاني منه المريض ؟
+2026-08-20 14:17:28,209 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 14:17:28,963 - [INFO] - Chatbot answered question.
+2026-08-20 14:17:44,014 - [INFO] - Processing chatbot question: كم وزنه 
+2026-08-20 14:17:45,530 - [INFO] - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-20 14:17:45,872 - [INFO] - Chatbot answered question.

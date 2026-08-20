@@ -1,0 +1,36 @@
+=====================================================
+            CITY CENTRAL HOSPITAL MEDICAL REPORT
+=====================================================
+Patient Name: Salem Ahmed
+Age: 45
+Gender: Male
+Admission Date: 2026-08-15
+Department: Internal Medicine
+
+[CHIEF COMPLAINT]
+Patient presented with a severe throbbing headache lasting for 4 consecutive days, accompanied by occasional dizziness and mild blurred vision.
+
+[VITAL SIGNS]
+- Blood Pressure: 155/95 mmHg (Elevated)
+- Heart Rate: 82 bpm
+- Respiratory Rate: 18 breaths/min
+- Body Temperature: 36.9 °C
+- SpO2: 98% on room air
+
+[MEDICAL HISTORY]
+- Known case of Type 2 Diabetes diagnosed 3 years ago.
+- No history of bronchial asthma.
+- No known drug allergies.
+
+[CURRENT MEDICATIONS]
+- Metformin 500mg orally twice daily with meals.
+
+[LABORATORY FINDINGS]
+- Fasting Blood Glucose: 110 mg/dL
+- HbA1c: 6.8%
+- Serum Creatinine: 0.9 mg/dL
+- Total Cholesterol: 210 mg/dL
+
+[CLINICAL NOTES & ASSESSMENT]
+Patient is experiencing Stage 2 Hypertension exacerbating tension-like headaches. Diabetes is currently well controlled. Recommended starting anti-hypertensive therapy and reducing salt intake.
+=====================================================

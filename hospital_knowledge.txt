@@ -1,0 +1,15 @@
+[General Hospital Guidelines & Clinical Knowledge Base]
+
+1. Normal Vital Signs:
+- Blood Pressure: Systolic 90-120 mmHg, Diastolic 60-80 mmHg.
+- Heart Rate: 60-100 bpm.
+- Fasting Blood Sugar: 70-99 mg/dL.
+- SpO2: 95% - 100%.
+
+2. Common Chronic Conditions & Standard Management:
+- Hypertension: Monitor BP twice daily, reduce sodium intake, recommend ACE inhibitors or ARBs as initial therapy if indicated.
+- Type 2 Diabetes: Target HbA1c < 7.0%, recommend Metformin first-line unless contraindicated (e.g., eGFR < 30).
+- Hyperlipidemia: Lifestyle modifications, statin therapy based on cardiovascular risk score.
+
+3. Red Flags & Urgent Consultation:
+- Severe acute chest pain, shortness of breath at rest, persistent fever > 39°C, neurological deficits.
